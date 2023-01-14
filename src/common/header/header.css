@@ -1,0 +1,23 @@
+* {
+  margin: 0px;
+}
+.header {
+  background-color: rgb(168, 90, 240);
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  width: 100%;
+}
+.logo {
+  height: 30px;
+  width: 30px;
+}
+.title {
+  color: bisque;
+  font-weight: 500;
+  font-size: 30px;
+}
+.cart {
+  height: 30px;
+  width: 30px;
+}
