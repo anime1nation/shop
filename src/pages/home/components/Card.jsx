@@ -18,32 +18,30 @@ function Pro() {
   return (
     <div id="fle">
       {product.map((ele) => (
-        <div id={ele.ID} className="card">
+        <div key={ele.ID} className="card">
           <div className="product">
             <img alt="" src={ele.ImgUrl} />
           </div>
           <div className="product-detail">
             <h3>
-              <a href="">
+              
                 {ele.design} {ele.color} {ele.pname}
-              </a>
+              
             </h3>
             <div className="price">
               <h2>₹{ele.p_price}</h2>
 
 
               <div id="qty">
-                  <button onClick={() => dispatch({ type: "inc" })} disabled={state ? 0 : 1}>-</button>
+                  <button onClick={() => dispatch({ type: "dec",id:ele.ID })} disabled={state ? 0 : 1}><b>-</b></button>
                   {state}
                 <button
-                  onClick={() => dispatch({ type: "dec" })}
+                  onClick={() => dispatch({ type: "inc",id:ele.ID })}
                 >
-                  +
+                  <b>+</b>
                 </button>
               </div>
-
-              
-              <button type="button" onClick={"#"} id="buy">
+              <button type="button"  id="buy">
                 Buy Now
               </button>
               

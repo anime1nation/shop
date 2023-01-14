@@ -5,6 +5,7 @@
 #fle {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .card {
   width: 20em;
@@ -55,6 +56,11 @@ a {
 }
 #qty button {
   padding: 0.5em;
+  border-radius: 40%;
+  border-style: none;
+  box-sizing: border-box;
+  background-color: rgb(80, 233, 225);
+  color: rgb(11, 10, 10);
 }
 @media screen and (max-width: 300px) {
 .price {
