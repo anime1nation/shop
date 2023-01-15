@@ -1,5 +1,6 @@
 import Header from "./common/header/Header.jsx"
 import Card from "./pages/home/components/Card.jsx"
+import Cart from "pages/cart/Cart.jsx";
 import "./App.css";
 
 
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <Header />
       <Card />
+      <Cart />
     </div>
   );
 }

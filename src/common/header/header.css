@@ -7,6 +7,7 @@
   justify-content:space-around;
   align-items: center;
   width: 100%;
+  position: fixed;
 }
 .logo {
   height: 30px;

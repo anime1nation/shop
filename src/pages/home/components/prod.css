@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.home {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-rows: 55px calc(100vh - 55px);
+  grid-template-columns: auto 220px;
+  grid-template-areas: "content sidebar";
+}
+.cart1 {
+  grid-area: sidebar;
+  margin-top: 50px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  height: 90vh;
+  position: sticky;
+}
+#fle {
+  grid-area: content;
+}
+@media (max-width: 500px) {
+  .home {
+    grid-template-columns: 4fr;
+    grid-template-areas:
+      "content"
+      "sidebar";
+  }
+}
