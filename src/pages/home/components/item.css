@@ -18,7 +18,7 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: rgb(175, 253, 254);
+    background-color:white;
   }
   .product img {
     max-width: 100%;
@@ -37,19 +37,7 @@
     display: flex;
     justify-content: space-between;
   }
-  #buy {
-    background-color: #ea4c89;
-    border-radius: 8px;
-    border-style: none;
-    box-sizing: border-box;
-    color: #ffffff;
-    padding: 10px;
-    cursor: pointer;
-    
-  }
-  #buy:hover {
-    background-color: #940b3f;
-  }
+  
   #qty {
     display: flex;
     gap: 0.5em;

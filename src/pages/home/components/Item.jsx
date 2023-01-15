@@ -24,7 +24,7 @@ export default function Item({
         </h3>
         <div className="price">
           <h2>₹{price}</h2>
-          <div id="qty">
+          <div id="qty">Quantity
             <button onClick={() => decrement(ID)} disabled={quantity ? 0 : 1}>
               <b>-</b>
             </button>
@@ -33,13 +33,7 @@ export default function Item({
               <b>+</b>
             </button>
           </div>
-          {quantity === 0 ? (
-            ""
-          ) : (
-            <button id="buy" type="button" onClick={("")}>
-              Add to cart
-            </button>
-          )}
+          
         </div>
       </div>
     </div>

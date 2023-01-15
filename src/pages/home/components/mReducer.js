@@ -1,39 +1,35 @@
-import { product } from "app-manager/store/product";
-
-export const initialState = {
-  product:product,
-  totalAmount:0,
-  totalItem:0,
-};
-
 export const reducer = (state, action) => {
   if (action.type === "inc") {
-    const updatedCart = state.product.map((quan) => {
+    const updatedCart = state.item.map((quan) => {
       if (quan.ID === action.id) {
         return { ...quan, quantity: quan.quantity + 1 };
       }
       return quan;
-      
     });
-    
-    console.log("dsds",updatedCart)
-    return { ...state, product: updatedCart };
+
+    console.log("dsds", updatedCart);
+    return { ...state, item: updatedCart };
   }
 
   if (action.type === "dec") {
-    const updatedCart = state.product
-      .map((quan) => {
-        if (quan.ID === action.id) {
-          return { ...quan, quantity: quan.quantity - 1 };
-        }
-        return quan;
-      })
-      // .filter((quan) => quan.quantity !== 0);
-    return { ...state, product: updatedCart };
+    const updatedCart = state.item.map((quan) => {
+      if (quan.ID === action.id) {
+        return { ...quan, quantity: quan.quantity - 1 };
+      }
+      return quan;
+    });
+    return { ...state, item: updatedCart };
+  }
+
+
+  if (action.type === "empty_cart") {
+    alert("Congratulation!!!! your T-shirts are purchased ");
+    window.location.reload();
+    return { ...state, item: [] };
   }
 
   if (action.type === "GET_TOTAL") {
-    let { totalItem, totalAmount } = state.product.reduce(
+    let { totalItem, totalAmount } = state.item.reduce(
       (accum, curVal) => {
         let { price, quantity } = curVal;
 
@@ -48,7 +44,7 @@ export const reducer = (state, action) => {
         totalAmount: 0,
       }
     );
-    console.log("dsdsdsd",totalAmount,totalItem)
+    console.log("dsdsdsd", totalAmount, totalItem);
     return { ...state, totalItem, totalAmount };
   }
   return state;

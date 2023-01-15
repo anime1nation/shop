@@ -9,7 +9,7 @@ export default function Header(){
         <header className="header">
             <img className="logo" alt="cart" src={logo} />
             <h2 className="title">Store</h2>
-            <button onClick={"handleClick"}><img className="cart" alt="cart" src={cart}  /></button>
+            <img className="cart" alt="cart" src={cart}  />
             
             
         </header>
