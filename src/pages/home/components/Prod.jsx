@@ -26,7 +26,6 @@ export default function Prod() {
         })}
         <div className="totall">
           <p>Total Quantity {totalItem}</p>
-          <br />
           <p>Total Cart Value ₹{totalAmount}</p>
         </div>
         <div className="buy">

@@ -23,7 +23,7 @@ export const reducer = (state, action) => {
 
 
   if (action.type === "empty_cart") {
-    alert("Congratulation!!!! your T-shirts are purchased ");
+    prompt("Congratulation!!!! your T-shirts are purchased ");
     window.location.reload();
     return { ...state, item: [] };
   }

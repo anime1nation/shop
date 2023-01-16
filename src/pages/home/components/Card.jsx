@@ -47,6 +47,7 @@ export default function Card() {
     <div>
       <CartContext.Provider value={{ ...state ,increment,decrement,emptycart}}>
       <Prod/>
+      
       </ CartContext.Provider>
     </div>
   );

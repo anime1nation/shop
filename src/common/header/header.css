@@ -8,6 +8,7 @@
   align-items: center;
   width: 100%;
   position: fixed;
+  z-index: 200;
 }
 .logo {
   height: 30px;

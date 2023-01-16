@@ -8,7 +8,8 @@ export default function Cart({
   design,
   quantity,
   price,
-}) {
+}) 
+{
   if (quantity > 0) {
     return (
       <>
@@ -17,7 +18,7 @@ export default function Cart({
             {design} {color} {Quality} {pname}
           </i>
           <br />
-          <span className="span1">Qty:{quantity}</span>
+          <span className="span1">Qty:{quantity}</span>{"    "}
           <span className="span2">Amount:{price}</span>
         </div>
         <hr />
