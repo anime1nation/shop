@@ -1,6 +1,6 @@
 import "./item.css";
 import React, { useContext } from "react";
-import { CartContext } from "./Card";
+import { CartContext } from "App";
 
 export default function Item({
   ID,

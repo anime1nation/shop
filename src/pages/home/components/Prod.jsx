@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { CartContext } from "./Card";
+import { CartContext } from "App.js";
 import Item from "./Item.jsx";
 import Cart from "pages/cart/Cart";
 import "./prod.css";
@@ -20,10 +20,11 @@ export default function Prod() {
             <i>Cart</i>
           </u>
         </div>
-        <div></div>
+        <div>
         {item.map((curItem) => {
           return <Cart key={curItem.ID} {...curItem} />;
         })}
+        </div>
         <div className="totall">
           <p>Total Quantity {totalItem}</p>
           <p>Total Cart Value ₹{totalAmount}</p>

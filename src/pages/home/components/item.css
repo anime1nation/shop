@@ -1,12 +1,4 @@
-* {
-    margin: 0px;
-    padding: 0px;
-  }
-  #fle {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  
   .card {
     width: 20em;
     box-shadow: 0 2px 7px #dfdfdf;
@@ -26,9 +18,6 @@
   }
   .product-detail {
     padding: 20px;
-  }
-  a {
-    text-decoration: none;
   }
   .price {
     overflow: hidden;
