@@ -23,7 +23,7 @@ export const reducer = (state, action) => {
 
 
   if (action.type === "empty_cart") {
-    window.location.href='/';
+    window.location.href='/game';
     return { ...state, item: [] };
   }
 
