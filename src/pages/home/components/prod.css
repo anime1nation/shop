@@ -55,12 +55,15 @@
   #buy:hover {
     background-color: #940b3f;
   }
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .home {
     height:10vh;
-    grid-template-columns: 4fr;
+    grid-template-columns: auto auto ;
     grid-template-areas:
       "content"
       "sidebar";
+  }
+  .cart1 {
+    position: relative;
   }
 }
