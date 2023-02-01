@@ -1,4 +1,30 @@
-
-.first{
-    margin-top: auto;
+.rum{
+    display: flex;
+    justify-content: space-around;
 }
+.ca {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    box-sizing: border-box;
+    border: 1px solid rgb(253, 248, 248);
+    box-shadow: 0 2px 7px #f3c8c8;
+    /* height: 90vh; */
+    position: fixed;
+    background-color: rgb(254, 254, 254);
+  }
+  .car{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 5000;
+    box-sizing: border-box;
+    color: blueviolet;
+  }
+  .tot{
+    text-align: right;
+    font-size: 20px;
+    padding-inline: 20px;
+    margin-top: 20px;
+  }

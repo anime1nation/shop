@@ -1,197 +1,43 @@
-import React, { useContext } from "react";
+import React, { useContext} from "react";
 import { CartContext } from "App";
+import Cart from "pages/cart/Cart";
 import "./test.css"
 
+
+
+
+
+
 export default function Test() {
-  const { totalAmount } = useContext(CartContext);
-  console.log("i m in test",{totalAmount});
-  return( 
-    <>
-    <div className="first">
-  <div className="car">
-    111111{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-  <div className="car">
-    giugiugiugig{totalAmount}
-    </div>
-    </div>
-    </>
-  );
+  const { item, totalAmount, totalItem,emptycart } = useContext(CartContext);
+  
+return(
+  <div className="rum">
+  <div className="ca">
+        <div className="car">
+          <u>
+            <i>Cart</i>
+          </u>
+        </div>
+        <div>
+        {item.map((curItem) => {
+          return <Cart key={curItem.ID} {...curItem} />;
+        })}
+        </div>
+        <div className="tot">
+          <p>Total Quantity {totalItem}</p>
+          <p>Total Cart Value ₹{totalAmount}</p>
+        </div>
+        <div className="buy">
+        {totalItem === 0 ? (
+          ""
+        ) : (
+          <button id="buy" type="submit" onClick={emptycart}>
+            Purchase
+          </button>
+        )}
+        </div>
+      </div>
+      </div>
+)
 }

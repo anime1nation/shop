@@ -23,8 +23,7 @@ export const reducer = (state, action) => {
 
 
   if (action.type === "empty_cart") {
-    prompt("Congratulation!!!! your T-shirts are purchased ");
-    window.location.reload();
+    window.location.href='/';
     return { ...state, item: [] };
   }
 

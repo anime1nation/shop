@@ -3,9 +3,17 @@ import { CartContext } from "App.js";
 import Item from "./Item.jsx";
 import Cart from "pages/cart/Cart";
 import "./prod.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Prod() {
-  const { item, totalAmount, totalItem ,emptycart} = useContext(CartContext);
+  const { item, totalAmount, totalItem } = useContext(CartContext);
+  
+const Navigate=useNavigate();
+
+  const emptycart = (e) => {
+    e.preventDefault();
+    Navigate("/cart")
+  };
   //   if(item.length === 0){
   return (
     <div className="home">

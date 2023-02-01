@@ -2,8 +2,7 @@
   display: grid;
   grid-gap: 20px;
   grid-template-columns: auto 220px;
-  grid-template-areas: "content "
-                       " sidebar";
+  grid-template-areas: "content sidebar";
   position: relative;
 }
 .cart1 {
@@ -55,15 +54,20 @@
   #buy:hover {
     background-color: #940b3f;
   }
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .home {
-    height:10vh;
-    grid-template-columns: auto auto ;
+    grid-template-columns: auto auto;
     grid-template-areas:
       "content"
       "sidebar";
   }
   .cart1 {
-    position: relative;
+  box-sizing: border-box;
+  border: 1px solid rgb(202, 29, 29);
+  box-shadow: 0 2px 7px #f3c8c8;
+  position: relative;
+  margin-inline: 50px;
+  height: auto;
+  margin-bottom: 50px;
   }
 }
