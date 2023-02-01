@@ -7,46 +7,55 @@ import { useNavigate } from "react-router-dom";
 
 export default function Prod() {
   const { item, totalAmount, totalItem } = useContext(CartContext);
-  
-const Navigate=useNavigate();
 
+  const Navigate = useNavigate();
+  const play = (e) => {
+    e.preventDefault();
+    Navigate("/game");
+  };
   const emptycart = (e) => {
     e.preventDefault();
-    Navigate("/cart")
+    Navigate("/cart");
   };
   //   if(item.length === 0){
   return (
-    <div className="home">
-      <div id="fle">
-        {item.map((curItem) => {
-          return <Item key={curItem.ID} {...curItem} />;
-        })}
-      </div>
-      <div className="cart1">
-        <div className="carthead">
-          <u>
-            <i>Cart</i>
-          </u>
+    <>
+      
+      <div className="home">
+        <div id="fle">
+          {item.map((curItem) => {
+            return <Item key={curItem.ID} {...curItem} />;
+          })}
         </div>
+        <div className="cart1">
         <div>
-        {item.map((curItem) => {
-          return <Cart key={curItem.ID} {...curItem} />;
-        })}
-        </div>
-        <div className="totall">
-          <p>Total Quantity {totalItem}</p>
-          <p>Total Cart Value ₹{totalAmount}</p>
-        </div>
-        <div className="buy">
-        {totalItem === 0 ? (
-          ""
-        ) : (
-          <button id="buy" type="submit" onClick={emptycart}>
-            Purchase
-          </button>
-        )}
+        <button className="btn btn-primary" onClick={play} />
+      </div>
+          <div className="carthead">
+            <u>
+              <i>Cart</i>
+            </u>
+          </div>
+          <div>
+            {item.map((curItem) => {
+              return <Cart key={curItem.ID} {...curItem} />;
+            })}
+          </div>
+          <div className="totall">
+            <p>Total Quantity {totalItem}</p>
+            <p>Total Cart Value ₹{totalAmount}</p>
+          </div>
+          <div className="buy">
+            {totalItem === 0 ? (
+              ""
+            ) : (
+              <button id="buy" type="submit" onClick={emptycart}>
+                Purchase
+              </button>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

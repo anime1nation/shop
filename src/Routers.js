@@ -1,3 +1,4 @@
+import Game from 'pages/home/components/Game'
 import Prod from 'pages/home/components/Prod'
 import Test from 'pages/home/components/Test'
 import React from 'react'
@@ -8,6 +9,7 @@ export default function Routers() {
     <Routes>
         <Route path="/" element={<Prod/>}/>
         <Route path="/cart" element={<Test />}/>
+        <Route path="/game" element={<Game/>}></Route>
     </Routes>
   )
 }
