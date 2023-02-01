@@ -1,4 +1,5 @@
 import React from "react";
+import './cart.css'
 
 export default function Cart({
   ID,
@@ -14,12 +15,14 @@ export default function Cart({
     return (
       <>
         <div className="listc">
-          <i>
+          <h3><i>
             {design} {color} {Quality} {pname}
-          </i>
+          </i></h3>
           <br />
-          <span className="span1">Qty:{quantity}</span>{"    "}
-          <span className="span2">Amount:{price}</span>
+          <div className="lab">
+          <label className="span1">Qty:{quantity}</label>
+          <label className="span2">Amount:{price}</label>
+        </div>
         </div>
         <hr />
       </>

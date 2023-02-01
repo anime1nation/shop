@@ -9,10 +9,6 @@ export default function Prod() {
   const { item, totalAmount, totalItem } = useContext(CartContext);
 
   const Navigate = useNavigate();
-  const play = (e) => {
-    e.preventDefault();
-    Navigate("/game");
-  };
   const emptycart = (e) => {
     e.preventDefault();
     Navigate("/cart");
@@ -28,9 +24,6 @@ export default function Prod() {
           })}
         </div>
         <div className="cart1">
-        <div>
-        <button className="btn btn-primary" onClick={play} />
-      </div>
           <div className="carthead">
             <u>
               <i>Cart</i>

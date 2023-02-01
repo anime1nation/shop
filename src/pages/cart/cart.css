@@ -1,10 +1,15 @@
 .listc{
-    margin-top:5px;
-    margin-inline: 20px;
+    margin-top:10px;
+    padding-inline: 15px;
+   
 }
 .span1{
-    text-align: right;
+    text-align: center;
 }
-.span2{
-    text-align: left;
+.span1{
+    left:0;
+}
+.lab{
+    display: flex;
+    justify-content: space-between;
 }

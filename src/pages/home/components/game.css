@@ -1,0 +1,87 @@
+
+  .gam h1 {
+    margin-top: 0;
+    font-size: 22px;
+  }
+  
+  .gam h2 {
+    margin-top: 0;
+    font-size: 20px;
+  }
+  
+  .gam h3 {
+    margin-top: 0;
+    font-size: 18px;
+  }
+  
+  .gam h4 {
+    margin-top: 0;
+    font-size: 16px;
+  }
+  
+  .gam h5 {
+    margin-top: 0;
+    font-size: 14px;
+  }
+  
+  .gam h6 {
+    margin-top: 0;
+    font-size: 12px;
+  }
+  
+  .gam code {
+    font-size: 1.2em;
+  }
+  
+  .gam ul {
+    padding-left: 20px;
+  }
+  
+  .gam .square {
+    background: rgb(250, 250, 250); 
+    border: 4px solid rgb(37, 247, 5);
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 100px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 100px;
+  }
+  .square:hover{
+    background: rgb(78, 249, 237);
+  }
+
+  
+  .board-row:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+  
+  .gam .status {
+    margin-bottom: 10px;
+  }
+  .game {
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+    justify-content: space-around;
+  }
+  
+  .game-info {
+    margin-left: 20px;
+  }
+  @media (max-width:500px){
+    .game{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap:20px;
+
+    }
+    
+  }
