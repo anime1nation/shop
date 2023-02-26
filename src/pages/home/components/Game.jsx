@@ -1,6 +1,26 @@
 import { useState } from "react";
 import "./game.css";
 
+
+function Count(){
+  const countEl = document.getElementById("count");
+    countvisits();
+  
+    function countvisits() {
+      fetch('https://api.countapi.xyz/update/shop2/shopgame2/?&amount=1')
+        .then((res) => res.json())
+        .then((res) => {
+          countEl.innerHTML = res.value;
+        });
+    } 
+    return(
+  <div>
+          <h2>Total Visit  <span id="count">0</span></h2>
+          </div>
+    )
+  }
+
+
 function Square({ value, onSquareClick }) {
   return (
     <button className="square" onClick={onSquareClick}>
@@ -88,7 +108,9 @@ export default function Game() {
   });
 
   return (
+
     <div className="game">
+      <div><Count/></div>
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>

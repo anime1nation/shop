@@ -5,8 +5,11 @@ import logo from "assets/logo.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
+
+
+
 export default function Header() {
-    
+  
 const Navigate = useNavigate();
   const play = (e) => {
     e.preventDefault();
@@ -26,6 +29,7 @@ const Navigate = useNavigate();
       <Link to="cart">
         <img className="cart" alt="cart" src={cart} />
       </Link>
+      
     </header>
   );
 }
