@@ -1,25 +1,25 @@
 import { useState } from "react";
 import "./game.css";
 
-
-function Count(){
+function Count() {
   const countEl = document.getElementById("count");
-    countvisits();
-  
-    function countvisits() {
-      fetch('https://api.countapi.xyz/update/shop2/shopgame2/?&amount=1')
-        .then((res) => res.json())
-        .then((res) => {
-          countEl.innerHTML = res.value;
-        });
-    } 
-    return(
-  <div>
-          <h2>Total Visit  <span id="count">0</span></h2>
-          </div>
-    )
-  }
+  countvisits();
 
+  function countvisits() {
+    fetch("https://api.countapi.xyz/update/shop2/shopgame2/?&amount=1")
+      .then((res) => res.json())
+      .then((res) => {
+        countEl.innerHTML = res.value;
+      });
+  }
+  return (
+    <div>
+      <h2 className="count">
+        <p>Total Hit On Page </p><p id="count">0</p> <p>times</p>
+      </h2>
+    </div>
+  );
+}
 
 function Square({ value, onSquareClick }) {
   return (
@@ -102,15 +102,18 @@ export default function Game() {
     }
     return (
       <li key={move}>
-        <button className="btn" onClick={() => jumpTo(move)}>{description}</button>
+        <button className="btn" onClick={() => jumpTo(move)}>
+          {description}
+        </button>
       </li>
     );
   });
 
   return (
-
     <div className="game">
-      <div><Count/></div>
+      <div>
+        <Count />
+      </div>
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
